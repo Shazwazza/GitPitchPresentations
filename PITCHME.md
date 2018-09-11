@@ -47,6 +47,7 @@ _Shannon Deminick, @shazwazza_
 
 @ul
 
+* Preview with variants
 * List views with variants
 * Back office searching with variants
 * Content app extensibility
