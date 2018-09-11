@@ -6,9 +6,13 @@ Umbraco Sydney Meetup 11/09/2018
 
 ## Solution/Project structure
 
+@ul
+
 * a lot less projects
 * a lot less code
 * a lot less legacy stuff
+
+@ulend
 
 ---
 
