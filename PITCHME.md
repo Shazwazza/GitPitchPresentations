@@ -1,6 +1,8 @@
 # Umbraco v8 WIP Status
 
-Umbraco Sydney Meetup 11/09/2018
+_Umbraco Sydney Meetup 11/09/2018_
+
+_Shannon Deminick, @shazwazza_
 
 ---
 
@@ -52,3 +54,7 @@ Umbraco Sydney Meetup 11/09/2018
 * Rollback with variants
 
 @ulend
+
+---
+
+## Questions?
