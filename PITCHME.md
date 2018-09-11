@@ -29,8 +29,9 @@ Umbraco Sydney Meetup 11/09/2018
 
 ---
 
-## Upcoming work
+## WIP/Upcoming work
 
+* List views with variants
 * Back office searching with variants
 * Content app extensibility
 * Scheduled publishing with variants
