@@ -13,6 +13,8 @@ _Shannon Deminick, @shazwazza_
 * a lot less projects
 * a lot less code
 * a lot less legacy stuff
+* 3x nuget packages
+    * UmbracoCms, UmbracoCms.Web, UmbracoCms.Core
 
 @ulend
 
