@@ -1,0 +1,9 @@
+.reveal ul li code {
+    color:orange;
+    font-size: 0.8em;
+}
+
+
+.reveal section img {
+    border:none;
+}
