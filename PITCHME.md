@@ -1,63 +1,125 @@
-# Umbraco v8 WIP Status
+---?color=#F2EBE6&image=template/img/umb/heart1.png&size=160px 160px&position=center
 
-_Umbraco Sydney Meetup 11/09/2018_
 
-_Shannon Deminick, @shazwazza_
 
----
+---?color=#3544B1
+@title[Introduction]
 
-## Solution/Project structure
+## Building Packages with Umbraco 8
 
-@ul
+@snap[south span-100 text-07]
+Shannon Deminick&nbsp;&nbsp;|&nbsp;&nbsp; @css[text-umb-pink](twitter): @shazwazza&nbsp;&nbsp;|&nbsp;&nbsp;@css[text-umb-pink](web): shazwazza.com
+@snapend
 
-* a lot less projects
-* a lot less code
-* a lot less legacy stuff
-* 3x nuget packages
-    * UmbracoCms, UmbracoCms.Web, UmbracoCms.Core
+Note:
 
-@ulend
+* Introduce yourself
 
----
+---?color=#3544B1
+@title[Agenda]
 
-## Content Variations
+## Upgrading&hellip;<br/>Building&hellip;<br/>Packaging&hellip;<br/>@css[text-umb-yellow](Learning!)
 
-@ul
+---?color=#F2EBE6
 
-* Variant vs invariant content
-* Variant vs invariant properties
-* Fun with validation
-* Split view editing
+@title[Articulate]
 
-@ulend
+@snap[west]
+@img[split-screen-img span-80](template/img/umb/articulate.png)
+@snapend
 
----
+@snap[north-east text-20 text-bolder text-umb-blue]
+Articulate
+@snapend
 
-## Content apps
+@snap[east]
+@ul[text-umb-dark-blue]
+- Uses a __lot__ of Umbraco surface area
+- A good way to test v8!
+@olend
+@snapend
 
-@ul
+---?color=#F2EBE6
 
-* Content is a "content app"
-* Info is a "content app"
-* This will be extensible ... how?
+@title[Surface Area]
 
-@ulend
+@snap[west]
+@img[split-screen-img span-80](template/img/umb/articulate.png)
+@snapend
 
----
+@snap[east]
+@ul[text-umb-dark-blue]
+- Custom routes & controllers
+- Virtual nodes
+- Content finders
+- Event handlers
+- Dashboards
+- Property Editors
+- Package manifest
+- Lots of views
+- Custom searching
+- Custom DB queries
+@olend
+@snapend
 
-## WIP/Upcoming work
+---?color=#3544B1
 
-@ul
+@title[Upgrading]
 
-* Preview with variants
-* List views with variants
-* Back office searching with variants
-* Content app extensibility
-* Scheduled publishing with variants
-* Rollback with variants
+@snap[midpoint span-100 text-15]
+## Upgrading
+@snapend
 
-@ulend
+---?color=#3544B1
 
----
+@snap[west span-45]
+# MVC
+@snapend
 
-## Questions?
+@snap[north-east span-60]
+@box[bg-umb-grey text-umb-dark-blue rounded](Model# Quering published content and getting property values)
+@snapend
+
+@snap[east span-60]
+@box[bg-umb-grey text-umb-dark-blue rounded](View# APIs available in Razor views)
+@snapend
+
+@snap[south-east span-60]
+@box[bg-umb-grey text-umb-dark-blue rounded](Controller# Changes to controllers and how to create your own)
+@snapend
+
+---?color=#3544B1
+
+@title[New Features]
+
+@snap[midpoint span-100 text-15]
+## New Features!
+@snapend
+@snap[midpoint span-100]
+<br/>
+<br/>
+<br/>
+@css[text-italic text-umb-pink text-08](...maybe some you haven't heard of!)
+@snapend
+
+
+
+
+---?color=#F2EBE6
+
+@title[Custom Controllers]
+
+@snap[west]
+@img[split-screen-img span-80](template/img/umb/articulate.png)
+@snapend
+
+@snap[north-east text-20 text-bolder text-umb-blue]
+Articulate
+@snapend
+
+@snap[east]
+@ul[text-umb-dark-blue]
+- Uses a lot of Umbraco surface area
+- A good way to test v8!
+@olend
+@snapend
