@@ -88,6 +88,23 @@ Articulate
 @box[bg-umb-grey text-umb-dark-blue rounded](Controller# Changes to controllers and how to create your own)
 @snapend
 
+---?color=#F2EBE6
+
+@title[Published Content]
+
+@snap[east text-17 text-bold text-umb-blue span-50]
+Important changes
+@snapend
+
+@snap[west text-umb-dark-blue span-65]
+@ul[split-screen-list text-08](false)
+* One way to get property values
+* No more dynamcis
+* RenderModel doesn't exist, just IPublishedContent
+@ulend
+@snapend
+
+
 ---?color=#3544B1
 
 @title[New Features]
