@@ -1,0 +1,9 @@
+
+{
+  "sections":  [
+    {
+      "alias": "myPackage",
+      "name":  "My Package"
+    }
+  ]
+}

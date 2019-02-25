@@ -1,0 +1,15 @@
+
+{
+  "dashboards":  [
+    {
+      "alias": "myCustomDashboard",
+      "view":  "~/App_Plugins/MyPackage/dashboard.html",
+      "sections":  [ "content", "settings" ],
+      "weight": -10,
+      "access": [
+        { "deny": "translator" },
+        { "grant": "admin" }
+      ]
+    }
+  ]
+}

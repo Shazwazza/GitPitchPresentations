@@ -1,5 +1,9 @@
 /* Custom styles */
 
+body .nowrap {
+  white-space: nowrap;
+}
+
 body .reveal a {
   color: #1B264F;
 }

@@ -270,7 +270,7 @@ Model changes
 <br/>
 <br/>
 <br/>
-@css[text-italic text-umb-pink text-08](Actually ... not a lot has changed)
+@css[text-italic text-umb-pink text-08](Not a lot has changed)
 @snapend
 
 ---?color=#F2EBE6
@@ -375,14 +375,133 @@ https://www.zpqrtbnk.net/posts/composing-umbraco-v8/
 
 ---?color=#3544B1
 
-@title[New Features]
+@title[Building]
 
 @snap[midpoint span-100 text-15]
-## New Features!
+## Building
 @snapend
-@snap[midpoint span-100]
+
+---?color=#F2EBE6
+
+@title[Package Manifest]
+
+@snap[north text-umb-blue text-bolder]
+Package Manifest
+
+@css[text-umb-dark-blue text-05](/App_Plugins/MyPlugin/package.manifest)
+@snapend
+
+@code[json zoom-15](template/src/package-manifest.json)
+
+@[2-6](Same as v7)
+@[7-9](Shiny new v8 features)
+@[7](Actually... I presented this here last here!)
+
+---?color=#F2EBE6
+
+@title[Dashboards]
+
+@snap[north text-umb-blue text-bolder]
+Dashboards
 <br/>
+@css[text-umb-dark-blue text-05 nowrap](https://our.umbraco.com/Documentation/Extending/Dashboards/index-v8)
+@snapend
+
+@code[json zoom-09](template/src/dashboards.json)
+
+@[5](Dashboard alias)
+@[6](Angular view to render)
+@[7](The sections the dashboard will appear in)
+@[8](Optional weight/order of the dashboard)
+@[9-11](Optional access control)
+
+---?color=#F2EBE6
+
+@title[Dashboards c#]
+
+@snap[north text-umb-blue text-bolder]
+Dashboards in c#
 <br/>
+@css[text-umb-dark-blue text-05 nowrap](https://our.umbraco.com/Documentation/Extending/Dashboards/index-v8)
 <br/>
-@css[text-italic text-umb-pink text-08](...maybe some you haven't heard of!)
+@css[text-umb-dark-blue text-05 nowrap](Assembly scanned)
+@snapend
+
+@code[csharp zoom-09](template/src/dashboards.cs)
+
+---?color=#F2EBE6
+
+@title[Sections]
+
+@snap[north text-umb-blue text-bolder]
+Sections
+<br/>
+@css[text-umb-dark-blue text-05 nowrap](<del>/config/applications.config</del>)
+@snapend
+
+@code[json](template/src/sections.json)
+
+---?color=#F2EBE6
+
+@title[Sections c#]
+
+@snap[north text-umb-blue text-bolder]
+Sections in c#
+<br/>
+@css[text-umb-dark-blue text-05 nowrap](<del>/config/applications.config</del>)
+@snapend
+
+@code[csharp](template/src/sections.cs)
+
+---?color=#F2EBE6
+
+@title[Full Screen Sections]
+
+@snap[west text-umb-brown text-50]
+@fa[tv]
+@snapend
+
+@snap[north-east text-20 text-bolder text-umb-blue]
+Full Screen Sections!?
+@snapend
+
+@snap[east]
+@ul[text-umb-dark-blue]
+* Kind of happened by fluke
+* Just a section + dashboard
+* No tree required
+* = No c# required
+@olend
+@snapend
+
+---?color=#F2EBE6
+
+@title[Package Options]
+
+@snap[west text-umb-brown text-50]
+@fa[cubes]
+@snapend
+
+@snap[north-east text-20 text-bolder text-umb-blue]
+Package Options!?
+@snapend
+
+@snap[east]
+@img[split-screen-img span-54](template/img/umb/post-install-screen.png)
+@snapend
+
+---?color=#F2EBE6
+
+@title[Package Options]
+
+@snap[west text-umb-brown text-50]
+@fa[cubes]
+@snapend
+
+@snap[north-east text-20 text-bolder text-umb-blue]
+Package Options
+@snapend
+
+@snap[east]
+@img[split-screen-img span-60](template/img/umb/package-options.png)
 @snapend
