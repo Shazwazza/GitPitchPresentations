@@ -1,0 +1,8 @@
+<header>
+    <img src='@Umbraco.Field("logo", recurse: true)' />
+</header>
+<h1>@Model.Content.Properties["title"].Value</h1>
+<main>
+    <div>@Umbraco.Field("description")</div>
+    <div>Price: @(Model.Content.GetPropertyValue<double>("price"))</div>
+</main>

@@ -1,0 +1,12 @@
+@inherits UmbracoTemplatePage
+<!-- 
+    This is equivalent to 
+    @inherits UmbracoViewPage<RenderModel>
+-->
+<html>
+    <body>
+        <h1>
+        @Model.Content.GetPropertyValue("title")
+        </h1>
+    </body>
+</html>

@@ -1,0 +1,8 @@
+<header>
+    <img src='@Model.Value("logo", fallback:Fallback.ToAncestors)' />
+</header>
+<h1>@Model.Value("title")</h1>
+<main>
+    <div>@Model.Value("description")</div>
+    <div>Price: @(Model.Value<double>("price"))</div>
+</main>

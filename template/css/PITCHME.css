@@ -1,5 +1,15 @@
 /* Custom styles */
 
+body .reveal a {
+  color: #1B264F;
+}
+
+body .reveal .slides section .code-presenting-annotation{
+  padding:15px 15px;
+  background-color:#3544B1;
+  opacity: initial !important;
+}
+
 #boxed-text-title {
   font-variant: inherit;  
   font-family: "Lato Black" !important;

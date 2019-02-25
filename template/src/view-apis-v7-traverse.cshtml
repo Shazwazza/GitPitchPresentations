@@ -1,0 +1,9 @@
+var root = @Model.Content.Site();
+
+var news = root.Children("news");
+
+var news2 = root.Children<News>();
+
+var art1 = news.Descendants("article");
+
+var art2 = news.Descendants<Article>();
