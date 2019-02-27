@@ -1,6 +1,11 @@
-var nUrl1 = news.Url;
+var nUrl1 = 
+  news.Url;
 
-var nUrl2 = @UmbracoContext.Url(news.Id);
+var nUrl2 = 
+  @UmbracoContext.Url(news.Id);
 
-var nUrlAbs = 
-    @UmbracoContext.UrlAbsolute(news.Id);
+var nUrlAbs1 = 
+  @news.UrlAbsolute();
+
+var nUrlAbs2 = 
+  @UmbracoContext.UrlAbsolute(news.Id);

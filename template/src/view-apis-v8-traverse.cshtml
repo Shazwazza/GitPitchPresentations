@@ -1,9 +1,14 @@
-var root = @Model.Content.Root();
+var root = 
+  @Model.Content.Root();
 
-var news1 = root.ChildrenOfType("news");
+var news1 = 
+  root.ChildrenOfType("news");
 
-var news2 = root.Children<News>();
+var news2 = 
+  root.Children<News>();
 
-var art1 = news.DescendantsOfType("article");
+var art1 = 
+  news.DescendantsOfType("article");
 
-var art2 = news.Descendants<Article>();
+var art2 = 
+  news.Descendants<Article>();

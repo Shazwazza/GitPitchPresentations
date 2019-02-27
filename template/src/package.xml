@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<umbPackage>
+    <info>
+        <package>
+            <name></name>
+            <version></version>
+            <license url=""></license>
+            <url></url>
+            <requirements type="strict">
+                <major>8</major>
+                <minor>0</minor>
+                <patch>0</patch>
+            </requirements>
+        </package>
+        <author>
+            <name></name>
+            <website></website>
+        </author>
+        <readme></readme>
+    </info>   
+    <view>~/App_Plugins/MyPackage/package-options.html</view>
+    <files>      
+    </files>
+</umbPackage>

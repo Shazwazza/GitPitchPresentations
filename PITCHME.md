@@ -3,7 +3,7 @@
 ---?color=#3544B1
 @title[Introduction]
 
-## Building Packages with Umbraco 8
+## Umbraco Packages in v8
 
 @snap[south span-100 text-07]
 Shannon Deminick&nbsp;&nbsp;|&nbsp;&nbsp; @css[text-umb-pink](twitter): @shazwazza&nbsp;&nbsp;|&nbsp;&nbsp;@css[text-umb-pink](web): shazwazza.com
@@ -12,7 +12,7 @@ Shannon Deminick&nbsp;&nbsp;|&nbsp;&nbsp; @css[text-umb-pink](twitter): @shazwaz
 ---?color=#3544B1
 @title[Agenda]
 
-## Migrating&hellip;<br/>Building&hellip;<br/>Packaging&hellip;<br/>@css[text-umb-pink](Learning!)
+## Migrating<br/>Building<br/>Packaging
 
 ---?color=#F2EBE6
 
@@ -60,7 +60,7 @@ Articulate
 
 @title[Migrating]
 
-@snap[midpoint span-100 text-15]
+@snap[midpoint span-100 text-20]
 ## Migrating
 @snapend
 
@@ -130,9 +130,7 @@ Model changes
 
 @title[Model.Value?]
 
-@snap[midpoint span-100 text-15]
 ## @css[text-umb-pink](@Model.Value) ?!
-@snapend
 
 ---?color=#F2EBE6
 
@@ -182,11 +180,11 @@ Model changes
 @snapend
 
 @snap[west span-50]
-@code[cs zoom-08](template/src/view-apis-v7-traverse.cshtml)
+@code[cs zoom-09](template/src/view-apis-v7-traverse.cshtml)
 @snapend
 
 @snap[east span-50]
-@code[cs zoom-08](template/src/view-apis-v8-traverse.cshtml)
+@code[cs zoom-09](template/src/view-apis-v8-traverse.cshtml)
 @snapend
 
 ---?color=#F2EBE6
@@ -206,11 +204,11 @@ Model changes
 @snapend
 
 @snap[west span-50]
-@code[cs zoom-08](template/src/view-apis-v7-urls.cshtml)
+@code[cs zoom-09](template/src/view-apis-v7-urls.cshtml)
 @snapend
 
 @snap[east span-50]
-@code[cs zoom-08](template/src/view-apis-v8-urls.cshtml)
+@code[cs zoom-09](template/src/view-apis-v8-urls.cshtml)
 @snapend
 
 ---?color=#F2EBE6
@@ -230,47 +228,57 @@ Model changes
 @snapend
 
 @snap[west span-50]
-@code[cs zoom-08](template/src/view-apis-v7-lookup.cshtml)
+@code[cs zoom-09](template/src/view-apis-v7-lookup.cshtml)
 @snapend
 
 @snap[east span-50]
-@code[cs zoom-08](template/src/view-apis-v8-lookup.cshtml)
+@code[cs zoom-09](template/src/view-apis-v8-lookup.cshtml)
 @snapend
 
 ---?color=#3544B1
 
 @title[No dynamics]
 
-@snap[midpoint span-100 text-15]
 ## ~~&nbsp;@CurrentPage&nbsp;~~
-@snapend
 
 ---?color=#3544B1
 
 @title[XPath vs Linq]
 
-@snap[midpoint span-100 text-15]
 ## XPath vs Linq
-@snapend
-@snap[midpoint span-100]
-<br/>
-<br/>
-<br/>
+
 @css[text-italic text-umb-pink text-08](v8's cache is __objects__, not XML)
+
+---?color=#F2EBE6
+
+@snap[north text-umb-brown]
+@css[text-umb-blue text-bolder](View APIs - Services)
+@snapend
+
+@snap[north-west text-umb-brown]
+(v7)
+@snapend
+
+@snap[north-east text-umb-brown]
+(v8)
+@snapend
+
+@snap[west span-50]
+@code[cs zoom-13](template/src/view-apis-v7-services.cshtml)
+@snapend
+
+@snap[east span-50]
+@code[cs zoom-13](template/src/view-apis-v8-services.cshtml)
 @snapend
 
 ---?color=#3544B1
 
-@title[Custom Controllers]
+@title[No singletons please]
 
-@snap[midpoint span-100 text-15]
-## Custom Controllers
-@snapend
-@snap[midpoint span-100]
-<br/>
-<br/>
-<br/>
-@css[text-italic text-umb-pink text-08](Not a lot has changed)
+## No singletons please 🙏🏻
+
+@snap[south-west span-100]
+@css[text-umb-pink text-08](Example:<br/>`@UmbracoContext.Current` <br/>instead of just<br/> `@UmbracoContext`)
 @snapend
 
 ---?color=#F2EBE6
@@ -285,9 +293,97 @@ Custom Controllers
 @ul[split-screen-list text-08]
 * Typical controllers are still auto routed<br/><br/><small>`SurfaceController`<br/>`UmbracoApiController`</small>
 * Controllers are constructed by DI
-* Controllers must be registered in the Container
+* Controllers must be registered in the DI Container
 * Typical controllers are auto-registered<br/><br/><small>`PluginController`<br/>`IRenderMvcController`<br/>`UmbracoApiController`</small>
 @ulend
+@snapend
+
+---?color=#3544B1
+
+## DI = Dependency Injection
+
+@title[DI is good]
+
+@css[text-umb-pink](Guaranteed to make you code better)
+
+---?color=#3544B1
+
+## DI = Dependency Injection
+
+@title[DI is easy]
+
+@css[text-umb-pink](It's much easier than you think)
+
+---?color=#3544B1
+
+## Singletons are no good
+
+@title[No Singletons]
+
+---?color=#F2EBE6
+
+@title[Bad Singletons]
+
+@snap[west]
+@img[split-screen-img span-60](template/img/umb/spaghetti.png)
+@snapend
+
+@snap[north-east text-15 text-bolder text-umb-blue]
+Bad Singletons
+@snapend
+
+@snap[east span-60]
+@ul[text-umb-dark-blue]
+- Easily cause interdependencies
+- Can't view dependency graph
+- Difficult to debug
+- Difficult to test
+- Creates spaghetti code
+@olend
+@snapend
+
+---?color=#F2EBE6
+
+@title[Good Singletons]
+
+@snap[west]
+@img[split-screen-img span-60](template/img/umb/spaghetti.png)
+@snapend
+
+@snap[north-east text-15 text-bolder text-umb-blue]
+Good Singletons?
+@snapend
+
+@snap[east span-60]
+@ul[text-umb-dark-blue]
+- c# Attributes
+- __rarely__ in extension methods
+@olend
+@snapend
+
+---?color=#F2EBE6
+
+@title[Singletons API]
+
+@snap[north text-umb-brown]
+@css[text-umb-blue text-bolder](Singleton APIs)
+@css[text-umb-dark-blue text-05](- If you must)
+@snapend
+
+@snap[north-west text-umb-brown]
+(v7)
+@snapend
+
+@snap[north-east text-umb-brown]
+(v8)
+@snapend
+
+@snap[west span-50]
+@code[cs zoom-10](template/src/singletons-v7.cs)
+@snapend
+
+@snap[east span-50]
+@code[cs zoom-10](template/src/singletons-v8.cs)
 @snapend
 
 ---?color=#F2EBE6
@@ -377,7 +473,7 @@ https://www.zpqrtbnk.net/posts/composing-umbraco-v8/
 
 @title[Building]
 
-@snap[midpoint span-100 text-15]
+@snap[midpoint span-100 text-20]
 ## Building
 @snapend
 
@@ -423,8 +519,10 @@ Dashboards
 Dashboards in c#
 <br/>
 @css[text-umb-dark-blue text-05 nowrap](https://our.umbraco.com/Documentation/Extending/Dashboards/index-v8)
-<br/>
-@css[text-umb-dark-blue text-05 nowrap](Assembly scanned)
+@snapend
+
+@snap[south text-umb-dark-blue text-05 nowrap]
+*__Currently__ assembly scanned*
 @snapend
 
 @code[csharp zoom-09](template/src/dashboards.cs)
@@ -451,6 +549,10 @@ Sections in c#
 @css[text-umb-dark-blue text-05 nowrap](<del>/config/applications.config</del>)
 @snapend
 
+@snap[south text-umb-dark-blue text-05 nowrap]
+*Manually registered*
+@snapend
+
 @code[csharp](template/src/sections.cs)
 
 ---?color=#F2EBE6
@@ -474,9 +576,21 @@ Full Screen Sections!?
 @olend
 @snapend
 
+---?color=#3544B1
+
+@title[Building]
+
+@snap[north span-100 text-15]
+## Let's see!
+@snapend
+
+@snap[midpoint span-100 text-50 text-umb-pink]
+@fa[laptop]
+@snapend
+
 ---?color=#F2EBE6
 
-@title[Package Options]
+@title[Package Options?]
 
 @snap[west text-umb-brown text-50]
 @fa[cubes]
@@ -486,7 +600,7 @@ Full Screen Sections!?
 Package Options!?
 @snapend
 
-@snap[east]
+@snap[south-east]
 @img[split-screen-img span-54](template/img/umb/post-install-screen.png)
 @snapend
 
@@ -502,6 +616,98 @@ Package Options!?
 Package Options
 @snapend
 
-@snap[east]
+@snap[south-east]
 @img[split-screen-img span-60](template/img/umb/package-options.png)
 @snapend
+
+---?color=#F2EBE6
+
+@title[Package Options]
+
+@snap[west text-umb-brown text-50]
+@fa[cubes]
+@snapend
+
+@snap[north-east text-20 text-bolder text-umb-blue]
+Package Options
+@snapend
+
+@snap[south-east]
+@img[split-screen-img span-60](template/img/umb/package-options-view.png)
+@snapend
+
+---?color=#F2EBE6
+
+@title[Package Options xml]
+
+@snap[west text-umb-brown text-50]
+@fa[cubes]
+@snapend
+
+@snap[north-east text-20 text-bolder text-umb-blue]
+package.xml
+@snapend
+
+@snap[south-east]
+@code[xml zoom-06](template/src/package.xml)
+@snapend
+
+---?color=#F2EBE6
+
+@title[Package Options - view]
+
+@snap[midpoint span-100]
+@code[xml zoom-13](template/src/package-view.xml)
+@snapend
+
+---?color=#3544B1
+
+@title[Packaging]
+
+@snap[midpoint span-100 text-20]
+## Packaging
+@snapend
+
+---?color=#F2EBE6
+
+@title[Packaging in the back office]
+
+@snap[west]
+@img[split-screen-img span-80](template/img/umb/new-package.png)
+@snapend
+
+@snap[north-east text-20 text-bolder text-umb-blue]
+Packaging UI
+@snapend
+
+@snap[east]
+@ul[text-umb-dark-blue]
+- Similar to v7
+- Quick to choose schema, content & files
+@olend
+@snapend
+
+---?color=#3544B1
+
+## What about CI/CD?
+
+TODO: Fill this in = powershell
+
+TODO: Fill this in
+
+---?color=#3544B1
+
+## Nuget
+
+TODO: Fill this in
+
+---?color=#3544B1
+
+## Package Actions
+
+TODO: Fill this in, still a thing
+
+## Data installation
+
+TODO: Fill this in
+

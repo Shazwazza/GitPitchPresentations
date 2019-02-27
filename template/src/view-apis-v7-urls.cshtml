@@ -1,6 +1,11 @@
-var nUrl1 = news.Url;
+var nUrl1 = 
+  news.Url;
 
-var nUrl2 = @Umbraco.NiceUrl(news.Id);
+var nUrl2 = 
+  @Umbraco.NiceUrl(news.Id);
 
-var nUrlAbs = 
-    @Umbraco.NiceUrlWithDomain(news.Id);
+var nUrlAbs1 = 
+  @news.UrlAbsolute();
+
+var nUrlAbs2 = 
+  @Umbraco.NiceUrlWithDomain(news.Id);
