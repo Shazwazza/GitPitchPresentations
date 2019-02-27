@@ -563,7 +563,7 @@ Sections in c#
 @fa[tv]
 @snapend
 
-@snap[north-east text-20 text-bolder text-umb-blue]
+@snap[north-east text-15 text-bolder text-umb-blue]
 Full Screen Sections!?
 @snapend
 
@@ -578,14 +578,10 @@ Full Screen Sections!?
 
 ---?color=#3544B1
 
-@title[Building]
-
-@snap[north span-100 text-15]
 ## Let's see!
-@snapend
 
-@snap[midpoint span-100 text-50 text-umb-pink]
-@fa[laptop]
+@snap[south span-80]
+@fa[laptop text-umb-pink text-50]
 @snapend
 
 ---?color=#F2EBE6
@@ -596,7 +592,7 @@ Full Screen Sections!?
 @fa[cubes]
 @snapend
 
-@snap[north-east text-20 text-bolder text-umb-blue]
+@snap[north-east text-15 text-bolder text-umb-blue]
 Package Options!?
 @snapend
 
@@ -612,7 +608,7 @@ Package Options!?
 @fa[cubes]
 @snapend
 
-@snap[north-east text-20 text-bolder text-umb-blue]
+@snap[north-east text-15 text-bolder text-umb-blue]
 Package Options
 @snapend
 
@@ -628,7 +624,7 @@ Package Options
 @fa[cubes]
 @snapend
 
-@snap[north-east text-20 text-bolder text-umb-blue]
+@snap[north-east text-15 text-bolder text-umb-blue]
 Package Options
 @snapend
 
@@ -636,28 +632,14 @@ Package Options
 @img[split-screen-img span-60](template/img/umb/package-options-view.png)
 @snapend
 
----?color=#F2EBE6
+---?color=#3544B1
 
-@title[Package Options xml]
+@title[Building]
 
-@snap[west text-umb-brown text-50]
-@fa[cubes]
-@snapend
+## Let's see!
 
-@snap[north-east text-20 text-bolder text-umb-blue]
-package.xml
-@snapend
-
-@snap[south-east]
-@code[xml zoom-06](template/src/package.xml)
-@snapend
-
----?color=#F2EBE6
-
-@title[Package Options - view]
-
-@snap[midpoint span-100]
-@code[xml zoom-13](template/src/package-view.xml)
+@snap[south span-80]
+@fa[laptop text-umb-pink text-50]
 @snapend
 
 ---?color=#3544B1
@@ -672,42 +654,85 @@ package.xml
 
 @title[Packaging in the back office]
 
-@snap[west]
-@img[split-screen-img span-80](template/img/umb/new-package.png)
+@snap[south span-80]
+@img[span-80](template/img/umb/new-package.png)
 @snapend
 
-@snap[north-east text-20 text-bolder text-umb-blue]
+@snap[north text-15 text-bolder text-umb-blue]
 Packaging UI
-@snapend
-
-@snap[east]
-@ul[text-umb-dark-blue]
-- Similar to v7
-- Quick to choose schema, content & files
-@olend
 @snapend
 
 ---?color=#3544B1
 
 ## What about CI/CD?
 
-TODO: Fill this in = powershell
-
-TODO: Fill this in
-
----?color=#3544B1
-
-## Nuget
-
-TODO: Fill this in
+@snap[south span-80]
+@fa[laptop text-umb-pink text-50]
+@snapend
 
 ---?color=#3544B1
 
-## Package Actions
+## ...and Nuget?
 
-TODO: Fill this in, still a thing
+---?color=#F2EBE6
 
-## Data installation
+@title[Umbraco Package Data installation]
 
-TODO: Fill this in
+@snap[west text-umb-brown text-50]
+@fa[database]
+@snapend
 
+@snap[north-east text-10 text-bolder text-umb-blue]
+Umbraco package data installation
+@snapend
+
+@snap[east]
+@ul[text-umb-dark-blue]
+* Packager installs files
+* Packager installs schema
+* c# code to install content + media
+* Package Action to invoke c#
+@ulend
+@snapend
+
+---?color=#F2EBE6
+
+@title[Nuget Package Data installation]
+
+@snap[west text-umb-brown text-50]
+@fa[database]
+@snapend
+
+@snap[north-east text-10 text-bolder text-umb-blue]
+Nuget package data installation
+@snapend
+
+@snap[east]
+@ul[text-umb-dark-blue]
+* Nuget installs files
+* Package Options installs schema
+* c# code to install content + media
+@ulend
+@snapend
+
+---?color=#3544B1
+
+## Can this be better?
+
+---?color=#3544B1
+
+## Package Migrations FTW
+
+---?color=#F2EBE6&image=template/img/umb/heart1.png&size=160px 160px&position=center
+
+@title[End]
+
+@snap[north]
+## @css[text-umb-blue](Questions?)
+@snapend
+
+
+@snap[south span-100 text-07 text-umb-dark-blue]
+<br/>
+Shannon Deminick&nbsp;&nbsp;|&nbsp;&nbsp; @css[text-umb-pink](twitter): @shazwazza&nbsp;&nbsp;|&nbsp;&nbsp;@css[text-umb-pink](web): shazwazza.com
+@snapend
